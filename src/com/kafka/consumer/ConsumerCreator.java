@@ -11,8 +11,8 @@ import org.apache.kafka.common.serialization.StringDeserializer;
 
 import com.kafka.constants.IKafkaConstants;
 
-public class Creator {
-    public static Consumer<Long, ?> createConsumer(){
+public class ConsumerCreator {
+    public static Consumer<Long, String> createConsumer(){
         final Properties props = new Properties();
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, IKafkaConstants.KAFKA_BROKERS);
         props.put(ConsumerConfig.GROUP_ID_CONFIG, IKafkaConstants.KAFKA_BROKERS);
